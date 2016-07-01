@@ -1,0 +1,21 @@
+PODS:
+  - iDroidLayout2 (0.2.0):
+    - TBXML (~> 1.5)
+  - LoremIpsum (1.0.0)
+  - TBXML (1.5)
+
+DEPENDENCIES:
+  - iDroidLayout2 (from `iDroidLayout2.podspec`)
+  - LoremIpsum (~> 1.0)
+  - TBXML (~> 1.5)
+
+EXTERNAL SOURCES:
+  iDroidLayout2:
+    :path: iDroidLayout2.podspec
+
+SPEC CHECKSUMS:
+  iDroidLayout2: 6087a15a289c2c19ef75caab791e7e9ae66b091f
+  LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
+  TBXML: 9f9dadb239f2f2af1dadb87fe43a0ce6e479379a
+
+COCOAPODS: 0.39.0
