@@ -11,9 +11,11 @@
 		1A54F1F2691211221974552F /* UICollectionViewFlowLayout+IDL_Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F8D3292EBB1FC73DFF7E /* UICollectionViewFlowLayout+IDL_Layout.m */; };
 		1A54F63DB5D1D01B35F2867C /* IDLKeyboardListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54FDBC345E5C29503B885C /* IDLKeyboardListener.m */; };
 		1A54F6999D3254093A0B8CC3 /* UICollectionView+IDL_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54FCEA9833DA158C30E314 /* UICollectionView+IDL_View.m */; };
+		1A54F6A73F5F0BE7FAB2A5B9 /* android@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A54FB8750493B7ED8310A96 /* android@3x.jpg */; };
 		1A54F6C20CA4AFCE25241D1E /* IDLCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F16107EE19319232BDB7 /* IDLCollectionViewFlowLayout.m */; };
 		1A54F7B676A153D8B99F3E71 /* UITextField+IDL_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F95EC6B39EFB728844BB /* UITextField+IDL_View.m */; };
 		1A54FAC57D5C04099AE6766C /* IDLCollectionViewUniformFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F9C465F6FAC9B3016032 /* IDLCollectionViewUniformFlowLayout.m */; };
+		1A54FBAD846BE3BE8A5871E7 /* android@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A54F9000AF9763CE377643A /* android@2x.jpg */; };
 		379C7218C2EC4D25A4F1D371 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3466C4187E343C8965C60D0 /* libPods-test.a */; };
 		3A858FE88D8844138D3781E1 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3466C4187E343C8965C60D0 /* libPods-test.a */; };
 		612C221C0DFA5F8D8793E74A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEC328CA92BF2305F205EEC /* libPods.a */; };
@@ -161,9 +163,11 @@
 		1A54F6DC53186F3FBFFC7E40 /* UICollectionViewFlowLayout+IDL_Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewFlowLayout+IDL_Layout.h"; sourceTree = "<group>"; };
 		1A54F7152111DAF914BE024B /* IDLKeyboardListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLKeyboardListener.h; sourceTree = "<group>"; };
 		1A54F8D3292EBB1FC73DFF7E /* UICollectionViewFlowLayout+IDL_Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewFlowLayout+IDL_Layout.m"; sourceTree = "<group>"; };
+		1A54F9000AF9763CE377643A /* android@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "android@2x.jpg"; sourceTree = "<group>"; };
 		1A54F9190EE5E9E4E7D83C4E /* IDLCollectionViewUniformFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLCollectionViewUniformFlowLayout.h; sourceTree = "<group>"; };
 		1A54F95EC6B39EFB728844BB /* UITextField+IDL_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+IDL_View.m"; sourceTree = "<group>"; };
 		1A54F9C465F6FAC9B3016032 /* IDLCollectionViewUniformFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLCollectionViewUniformFlowLayout.m; sourceTree = "<group>"; };
+		1A54FB8750493B7ED8310A96 /* android@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "android@3x.jpg"; sourceTree = "<group>"; };
 		1A54FCEA9833DA158C30E314 /* UICollectionView+IDL_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+IDL_View.m"; sourceTree = "<group>"; };
 		1A54FD0EB0FFFB2A0738B170 /* UIView+IDL_KVOObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IDL_KVOObserver.m"; sourceTree = "<group>"; };
 		1A54FDBC345E5C29503B885C /* IDLKeyboardListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLKeyboardListener.m; sourceTree = "<group>"; };
@@ -929,6 +933,8 @@
 				79DE0BFA1695FC5C00EDACE3 /* button_normal.9@2x.png */,
 				A7434E0F1A29EEC100A74D40 /* background1.xml */,
 				A7434E101A29EEC100A74D40 /* button_background.xml */,
+				1A54F9000AF9763CE377643A /* android@2x.jpg */,
+				1A54FB8750493B7ED8310A96 /* android@3x.jpg */,
 			);
 			path = drawables;
 			sourceTree = "<group>";
@@ -1100,6 +1106,8 @@
 				79DE0BFE1695FC5C00EDACE3 /* button_normal.9@2x.png in Resources */,
 				A7434E221A29EEC100A74D40 /* formular~ipad.xml in Resources */,
 				C24B694F961B16134DFDC707 /* collectionViewCell.xml in Resources */,
+				1A54FBAD846BE3BE8A5871E7 /* android@2x.jpg in Resources */,
+				1A54F6A73F5F0BE7FAB2A5B9 /* android@3x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
