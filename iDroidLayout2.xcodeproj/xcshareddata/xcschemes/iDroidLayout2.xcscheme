@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "794BF829182C4FF300A6DF05"
+               BuildableName = "iDroidLayout2Tests.xctest"
+               BlueprintName = "iDroidLayout2Tests"
+               ReferencedContainer = "container:iDroidLayout2.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "794BF81C182C4FF300A6DF05"
+            BuildableName = "libiDroidLayout2.a"
+            BlueprintName = "iDroidLayout2"
+            ReferencedContainer = "container:iDroidLayout2.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
