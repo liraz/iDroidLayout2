@@ -9,9 +9,14 @@
 #import "IDLEditText.h"
 #import "UIView+IDL_Layout.h"
 #import "Categories/UITextField+IDL_View.h"
+#import "NSDictionary+IDL_ResourceManager.h"
+#import "UIImage+IDLNinePatch.h"
 
 @implementation IDLEditText {
     BOOL _appliedJumpFix;
+
+    UIImage *_imageButtonClearHighlighted;
+    UIImage *_imageButtonClearNormal;
 }
 
 @synthesize contentVerticalAlignment = _contentVerticalAlignment;
@@ -23,6 +28,63 @@
                                                  name:UITextFieldTextDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textEndEditing:)
                                                  name:UITextFieldTextDidEndEditingNotification object:nil];
+
+    NSString *cornerRadius = attrs[@"cornerRadius"];
+    if (cornerRadius != nil) {
+        self.layer.cornerRadius = [cornerRadius floatValue];
+        self.clipsToBounds = YES;
+    }
+
+    // backgroundColor
+    UIColor *backgroundColor = [attrs colorFromIDLValueForKey:@"backgroundColor"];
+    if (backgroundColor != nil) {
+        self.backgroundColor = backgroundColor;
+    }
+
+    //maskCharacters
+    BOOL clearButton = [attrs boolFromIDLValueForKey:@"clearButton"];
+    if(clearButton)
+        self.clearButtonMode = UITextFieldViewModeWhileEditing;
+
+    // clearButtonNormalTint
+    // clearButtonHighlightedTint
+    UIColor *clearButtonNormalTint = [attrs colorFromIDLValueForKey:@"clearButtonNormalTint"];
+    UIColor *clearButtonHighlightedTint = [attrs colorFromIDLValueForKey:@"clearButtonHighlightedTint"];
+
+    if (clearButtonNormalTint != nil) {
+        self.colorButtonClearNormal = clearButtonNormalTint;
+        if(clearButtonHighlightedTint == nil) {
+            self.colorButtonClearHighlighted = clearButtonNormalTint;
+        }
+    }
+    if (clearButtonHighlightedTint != nil) {
+        self.colorButtonClearHighlighted = clearButtonHighlightedTint;
+        if(clearButtonNormalTint == nil) {
+            self.colorButtonClearNormal = clearButtonHighlightedTint;
+        }
+    }
+
+    //queryHint or hint
+    NSString *queryHint = [attrs stringFromIDLValueForKey:@"queryHint"];
+    if(queryHint == nil)
+        queryHint = [attrs stringFromIDLValueForKey:@"hint"];
+
+    if (queryHint != nil) {
+        self.placeholder = queryHint;
+    }
+
+    // textColorHint
+    UIColor *textColorHint = [attrs colorFromIDLValueForKey:@"textColorHint"];
+    if (textColorHint != nil) {
+        self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{
+                NSForegroundColorAttributeName: textColorHint
+        }];
+    }
+
+    //maskCharacters
+    BOOL maskCharacters = [attrs boolFromIDLValueForKey:@"maskCharacters"];
+    if(maskCharacters)
+        self.secureTextEntry = YES;
 }
 
 - (void)onMeasureWithWidthMeasureSpec:(IDLLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(IDLLayoutMeasureSpec)heightMeasureSpec {
@@ -90,7 +152,7 @@
         }
     }
     measuredSize.height.size = MAX(measuredSize.height.size, minSize.height);
-    
+
     [self setMeasuredDimensionSize:measuredSize];
 }
 
@@ -169,7 +231,7 @@
     return result;
 }
 
-- (CGRect)placeholderRectForBounds:(CGRect)bounds {
+/*- (CGRect)placeholderRectForBounds:(CGRect)bounds {
     bounds = UIEdgeInsetsInsetRect(bounds, self.padding);
     CGRect rect = [super placeholderRectForBounds:bounds];
     CGRect result;
@@ -188,8 +250,49 @@
             break;
     }
     return result;
+}*/
+
+-(void) layoutSubviews {
+    [super layoutSubviews];
+
+    if (self.colorButtonClearHighlighted && self.colorButtonClearNormal) {
+        [self tintButtonClear];
+    }
 }
 
+-(void) tintButtonClear {
+
+    UIButton *buttonClear = [self buttonClear];
+
+    if(self.colorButtonClearNormal && self.colorButtonClearHighlighted && buttonClear) {
+        if(!_imageButtonClearHighlighted) {
+            UIImage *imageHighlighted = [buttonClear imageForState:UIControlStateHighlighted];
+            _imageButtonClearHighlighted = [UIImage imageWithImage:imageHighlighted
+                                                         tintColor:self.colorButtonClearHighlighted];
+        }
+
+        if(!_imageButtonClearNormal) {
+            UIImage *imageNormal = [buttonClear imageForState:UIControlStateNormal];
+            _imageButtonClearNormal = [UIImage imageWithImage:imageNormal
+                                                    tintColor:self.colorButtonClearNormal];
+        }
+
+        if(_imageButtonClearHighlighted && _imageButtonClearNormal) {
+            [buttonClear setImage:_imageButtonClearHighlighted forState:UIControlStateHighlighted];
+            [buttonClear setImage:_imageButtonClearNormal forState:UIControlStateNormal];
+        }
+    }
+}
+
+-(UIButton *) buttonClear {
+    for(UIView *v in self.subviews) {
+        if([v isKindOfClass:[UIButton class]]) {
+            UIButton *buttonClear = (UIButton *) v;
+            return buttonClear;
+        }
+    }
+    return nil;
+}
 
 - (void)drawTextInRect:(CGRect)rect {
     CGRect r = [self textRectForBounds:rect];

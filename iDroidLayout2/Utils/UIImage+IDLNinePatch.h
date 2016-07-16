@@ -12,6 +12,8 @@
 
 + (UIImage *)idl_imageWithName:(NSString *)name fromBundle:(NSBundle *)bundle;
 
++ (UIImage *)imageWithImage:(UIImage *)image tintColor:(UIColor *)tintColor;
+
 @property (nonatomic, readonly) BOOL hasNinePatchPaddings;
 @property (nonatomic, readonly) UIEdgeInsets ninePatchPaddings;
 

@@ -31,6 +31,10 @@
                 background="@drawable/background1"
                 layout_width="match_parent"
                 layout_height="40"
+                hint="eg. username@domain.com"
+                textColorHint="#ffffff"
+                clearButton="true"
+                clearButtonNormalTint="#ffff0000"
                 textStyle="bold"
                 layout_toRightOf="username_label"
                 layout_alignParentRight="true"/>
@@ -51,7 +55,7 @@
             <EditText
                 id="password"
                 background="@drawable/background1"
-                inputType="textPassword"
+                maskCharacters="true"
                 layout_width="match_parent"
                 layout_height="40"
                 layout_toRightOf="password_label"
@@ -99,7 +103,7 @@
                 onClick="didPressToggleButton"
                 background="@drawable/background1"
                 textColor="@color/button_color"
-                drawableLeft="@drawable/android.jpg"
+                drawableLeft="@drawable/ic_account_circle_18pt"
                 drawableRight="@drawable/android.jpg"
                 drawablePadding="10dp"
                 layout_marginLeft="10"

@@ -13,4 +13,7 @@
 @property (nonatomic, assign) UIControlContentVerticalAlignment contentVerticalAlignment;
 @property (nonatomic) NSString* rawInputType;
 
+@property (nonatomic,strong) UIColor *colorButtonClearHighlighted;
+@property (nonatomic,strong) UIColor *colorButtonClearNormal;
+
 @end

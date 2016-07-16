@@ -168,7 +168,20 @@ static char ninePatchPaddingsKey;
     
     if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [UIScreen mainScreen].scale >= 2.f) {
         NSString *retinaFileName = [fileName stringByAppendingString:@"@2x"];
+        if([UIScreen mainScreen].scale >= 3.f) {
+            retinaFileName = [fileName stringByAppendingString:@"@3x"];
+        }
+
         NSURL *retinaImageURL = [bundle URLForResource:retinaFileName withExtension:extension];
+
+        if(retinaImageURL == nil) { // looking for SVN friendly retina paths - "image_2x.png", "image_3x.png"
+            retinaFileName = [fileName stringByAppendingString:@"_2x"];
+            if([UIScreen mainScreen].scale >= 3.f) {
+                retinaFileName = [fileName stringByAppendingString:@"_3x"];
+            }
+            retinaImageURL = [bundle URLForResource:retinaFileName withExtension:extension];
+        }
+
         if (retinaImageURL != nil) {
             UIImage *nonScaledImage = [[UIImage alloc] initWithContentsOfFile:[retinaImageURL path]];
             UIImage *retinaImage = nil;
@@ -238,6 +251,26 @@ static char ninePatchPaddingsKey;
         resizableImage = [nonScaledImage stretchableImageWithLeftCapWidth:insets.left topCapHeight:insets.top];
     }
     return resizableImage;
+}
+
+/*
+ * Changing the tint of the image by tintColor
+ */
++ (UIImage *) imageWithImage:(UIImage *)image tintColor:(UIColor *)tintColor {
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [image drawAtPoint:CGPointZero blendMode: kCGBlendModeNormal alpha: 1.0];
+
+    CGContextSetFillColorWithColor(context, tintColor.CGColor);
+    CGContextSetBlendMode(context, kCGBlendModeSourceIn);
+    CGContextSetAlpha(context, 1.0);
+
+    CGRect rect = (CGRect){ CGPointZero, image.size };
+    CGContextFillRect(context, rect);
+
+    UIImage *imageTinted  = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imageTinted;
 }
 
 @end

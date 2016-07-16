@@ -34,8 +34,8 @@
     IDLTextView* textLabel = [IDLTextView new];
 
     NSString *text = attrs[@"text"];
-    BOOL hasValidText = [[IDLResourceManager currentResourceManager] isValidIdentifier:text];
-    if (hasValidText) {
+    BOOL hasValidIdentifier = [[IDLResourceManager currentResourceManager] isValidIdentifier:text];
+    if (hasValidIdentifier) {
         NSString *title = [[IDLResourceManager currentResourceManager] stringForIdentifier:text];
         textLabel.text = title;
     } else {
@@ -44,7 +44,7 @@
     [self addView:textLabel];
 
     NSString *textColor = attrs[@"textColor"];
-    if ([textColor length] > 0 && hasValidText) {
+    if ([textColor length] > 0) {
         IDLColorStateList *colorStateList = [[IDLResourceManager currentResourceManager] colorStateListForIdentifier:textColor];
         if (colorStateList != nil) {
             for (NSInteger i=[colorStateList.items count]-1; i>=0; i--) {

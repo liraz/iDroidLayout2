@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A9097B1D3AB68100F3D9AD /* ic_account_circle_18pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A54F0B9CA4CBC3C13AE947C /* ic_account_circle_18pt.png */; };
 		1A54F14B91EA07772808B86B /* UIView+IDL_KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54FD0EB0FFFB2A0738B170 /* UIView+IDL_KVOObserver.m */; };
 		1A54F1F2691211221974552F /* UICollectionViewFlowLayout+IDL_Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F8D3292EBB1FC73DFF7E /* UICollectionViewFlowLayout+IDL_Layout.m */; };
 		1A54F63DB5D1D01B35F2867C /* IDLKeyboardListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54FDBC345E5C29503B885C /* IDLKeyboardListener.m */; };
@@ -14,8 +15,12 @@
 		1A54F6A73F5F0BE7FAB2A5B9 /* android@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A54FB8750493B7ED8310A96 /* android@3x.jpg */; };
 		1A54F6C20CA4AFCE25241D1E /* IDLCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F16107EE19319232BDB7 /* IDLCollectionViewFlowLayout.m */; };
 		1A54F7B676A153D8B99F3E71 /* UITextField+IDL_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F95EC6B39EFB728844BB /* UITextField+IDL_View.m */; };
+		1A54F80385C9FE18CDE99B85 /* ic_account_circle_18pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A54FFBE68D33FDCF1AE36E3 /* ic_account_circle_18pt_3x.png */; };
+		1A54F81562FF6A958E9B8A7F /* ic_account_circle_18pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A54FFBE68D33FDCF1AE36E3 /* ic_account_circle_18pt_3x.png */; };
+		1A54F81878AA5D9AC9B555C0 /* ic_account_circle_18pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A54F58F415C3ABEFBC02AFF /* ic_account_circle_18pt_2x.png */; };
 		1A54FAC57D5C04099AE6766C /* IDLCollectionViewUniformFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F9C465F6FAC9B3016032 /* IDLCollectionViewUniformFlowLayout.m */; };
 		1A54FBAD846BE3BE8A5871E7 /* android@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A54F9000AF9763CE377643A /* android@2x.jpg */; };
+		1A54FC84EF57D362A47B5984 /* ic_account_circle_18pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A54F58F415C3ABEFBC02AFF /* ic_account_circle_18pt_2x.png */; };
 		379C7218C2EC4D25A4F1D371 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3466C4187E343C8965C60D0 /* libPods-test.a */; };
 		3A858FE88D8844138D3781E1 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3466C4187E343C8965C60D0 /* libPods-test.a */; };
 		612C221C0DFA5F8D8793E74A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEC328CA92BF2305F205EEC /* libPods.a */; };
@@ -156,8 +161,10 @@
 /* Begin PBXFileReference section */
 		0BEC328CA92BF2305F205EEC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4DA7618F4472EFB5E3AEFD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1A54F0B9CA4CBC3C13AE947C /* ic_account_circle_18pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_account_circle_18pt.png; sourceTree = "<group>"; };
 		1A54F16107EE19319232BDB7 /* IDLCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		1A54F4C0456DAA1D9DEB6117 /* UICollectionView+IDL_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+IDL_View.h"; sourceTree = "<group>"; };
+		1A54F58F415C3ABEFBC02AFF /* ic_account_circle_18pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_account_circle_18pt_2x.png; sourceTree = "<group>"; };
 		1A54F5F5719C12765F332882 /* UITextField+IDL_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+IDL_View.h"; sourceTree = "<group>"; };
 		1A54F5FFFC68CD58D584F9AD /* IDLCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		1A54F6DC53186F3FBFFC7E40 /* UICollectionViewFlowLayout+IDL_Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewFlowLayout+IDL_Layout.h"; sourceTree = "<group>"; };
@@ -172,6 +179,7 @@
 		1A54FD0EB0FFFB2A0738B170 /* UIView+IDL_KVOObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IDL_KVOObserver.m"; sourceTree = "<group>"; };
 		1A54FDBC345E5C29503B885C /* IDLKeyboardListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLKeyboardListener.m; sourceTree = "<group>"; };
 		1A54FED9B9724E6F1FA8D3F6 /* UIView+IDL_KVOObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IDL_KVOObserver.h"; sourceTree = "<group>"; };
+		1A54FFBE68D33FDCF1AE36E3 /* ic_account_circle_18pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_account_circle_18pt_3x.png; sourceTree = "<group>"; };
 		4BE5E24CC5B4A1927E2E97EB /* libPods-iDroidLayout2Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iDroidLayout2Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BBF0B37C9E59FE57393545 /* Pods-iDroidLayout2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iDroidLayout2.release.xcconfig"; path = "Pods/Target Support Files/Pods-iDroidLayout2/Pods-iDroidLayout2.release.xcconfig"; sourceTree = "<group>"; };
 		79269318167D03FE0078EE37 /* IDLResourceValueSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLResourceValueSet.h; sourceTree = "<group>"; };
@@ -935,6 +943,9 @@
 				A7434E101A29EEC100A74D40 /* button_background.xml */,
 				1A54F9000AF9763CE377643A /* android@2x.jpg */,
 				1A54FB8750493B7ED8310A96 /* android@3x.jpg */,
+				1A54F0B9CA4CBC3C13AE947C /* ic_account_circle_18pt.png */,
+				1A54F58F415C3ABEFBC02AFF /* ic_account_circle_18pt_2x.png */,
+				1A54FFBE68D33FDCF1AE36E3 /* ic_account_circle_18pt_3x.png */,
 			);
 			path = drawables;
 			sourceTree = "<group>";
@@ -1077,6 +1088,8 @@
 				79CEF924182C5911005E2FD1 /* testLayout1.xml in Resources */,
 				79CEF927182C5911005E2FD1 /* testLayout4.xml in Resources */,
 				79CEF926182C5911005E2FD1 /* testLayout3.xml in Resources */,
+				1A54FC84EF57D362A47B5984 /* ic_account_circle_18pt_2x.png in Resources */,
+				1A54F81562FF6A958E9B8A7F /* ic_account_circle_18pt_3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1084,6 +1097,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A9097B1D3AB68100F3D9AD /* ic_account_circle_18pt.png in Resources */,
 				79642C221603C4E80095D5A2 /* InfoPlist.strings in Resources */,
 				A7434E1E1A29EEC100A74D40 /* background1.xml in Resources */,
 				79642CCD1603C5DB0095D5A2 /* android.jpg in Resources */,
@@ -1108,6 +1122,8 @@
 				C24B694F961B16134DFDC707 /* collectionViewCell.xml in Resources */,
 				1A54FBAD846BE3BE8A5871E7 /* android@2x.jpg in Resources */,
 				1A54F6A73F5F0BE7FAB2A5B9 /* android@3x.jpg in Resources */,
+				1A54F81878AA5D9AC9B555C0 /* ic_account_circle_18pt_2x.png in Resources */,
+				1A54F80385C9FE18CDE99B85 /* ic_account_circle_18pt_3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
