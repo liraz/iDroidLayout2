@@ -9,6 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "FormularViewController.h"
 #import "iDroidLayout2.h"
+#import "IDLImageView.h"
 
 @implementation FormularViewController
 
@@ -32,7 +33,7 @@
 }
 
 - (void)didPressToggleButton {
-    UIView *androidView = [self.view findViewById:@"android"];
+    IDLImageView *androidView = (IDLImageView *) [self.view findViewById:@"android"];
     if (androidView.visibility == IDLViewVisibilityVisible) {
         IDLLinearLayoutLayoutParams *lp = (IDLLinearLayoutLayoutParams *)androidView.layoutParams;
         if (lp.gravity == IDLViewContentGravityLeft) {
@@ -44,6 +45,8 @@
             androidView.visibility = IDLViewVisibilityInvisible;
         }
         androidView.layoutParams = lp;
+        androidView.gravity = lp.gravity;
+
     } else if (androidView.visibility == IDLViewVisibilityInvisible) {
         androidView.visibility = IDLViewVisibilityGone;
     } else {

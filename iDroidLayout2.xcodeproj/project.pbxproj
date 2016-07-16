@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044C03FC1D3AF2A800C4C7BA /* IDLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C03FB1D3AF2A800C4C7BA /* IDLImageView.m */; };
 		04A9097B1D3AB68100F3D9AD /* ic_account_circle_18pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A54F0B9CA4CBC3C13AE947C /* ic_account_circle_18pt.png */; };
 		1A54F14B91EA07772808B86B /* UIView+IDL_KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54FD0EB0FFFB2A0738B170 /* UIView+IDL_KVOObserver.m */; };
 		1A54F1F2691211221974552F /* UICollectionViewFlowLayout+IDL_Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54F8D3292EBB1FC73DFF7E /* UICollectionViewFlowLayout+IDL_Layout.m */; };
@@ -159,6 +160,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		044C03FA1D3AF2A800C4C7BA /* IDLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLImageView.h; sourceTree = "<group>"; };
+		044C03FB1D3AF2A800C4C7BA /* IDLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLImageView.m; sourceTree = "<group>"; };
 		0BEC328CA92BF2305F205EEC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4DA7618F4472EFB5E3AEFD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1A54F0B9CA4CBC3C13AE947C /* ic_account_circle_18pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_account_circle_18pt.png; sourceTree = "<group>"; };
@@ -720,6 +723,8 @@
 		79642C571603C5500095D5A2 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				044C03FA1D3AF2A800C4C7BA /* IDLImageView.h */,
+				044C03FB1D3AF2A800C4C7BA /* IDLImageView.m */,
 				79642C581603C5500095D5A2 /* Categories */,
 				79DE0C0C1698A56D00EDACE3 /* IDLButton.h */,
 				79DE0C0D1698A56D00EDACE3 /* IDLButton.m */,
@@ -1288,6 +1293,7 @@
 				794BF86B182C508600A6DF05 /* UIView+IDL_Layout.m in Sources */,
 				794BF86C182C508600A6DF05 /* UIView+IDL_ViewGroup.m in Sources */,
 				794BF86D182C508600A6DF05 /* UIButton+IDL_View.m in Sources */,
+				044C03FC1D3AF2A800C4C7BA /* IDLImageView.m in Sources */,
 				79CEF934182D6D7E005E2FD1 /* IDLResourceManager+IDL_Internal.m in Sources */,
 				A71E2CCE1A33585E003C865E /* IDLCollectionViewCell.m in Sources */,
 				794BF86E182C508600A6DF05 /* UIControl+IDL_View.m in Sources */,

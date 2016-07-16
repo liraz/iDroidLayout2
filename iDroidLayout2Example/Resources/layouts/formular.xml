@@ -1,114 +1,119 @@
-<UIScrollView
-    layout_width="match_parent"
-    layout_height="match_parent"
-    padding="10">
+<UIScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10">
+
     <LinearLayout
-        layout_width="match_parent"
-        layout_height="wrap_content"
-        orientation="vertical">
-        <UIImageView
-            id="android"
-            layout_width="match_parent"
-            layout_height="100"
-            scaleType="centerInside"
-            layout_gravity="center_horizontal"
-            src="@drawable/android.jpg"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="android"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/android.jpg"/>
+
         <RelativeLayout
-            layout_width="match_parent"
-            layout_height="wrap_content"
-            layout_marginBottom="10">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10">
             <TextView
-                id="username_label"
-                layout_width="100"
-                layout_height="40"
-                layout_alignParentLeft="true"
-                layout_gravity="center_vertical"
-                gravity="left|center_vertical"
-                font="Helvetica-Bold"
-                text="@string/values.username_label"/>
+                    android:id="username_label"
+                    android:layout_width="100"
+                    android:layout_height="40"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left|center_vertical"
+                    android:font="Helvetica-Bold"
+                    android:text="@string/values.username_label"/>
             <EditText
-                id="username"
-                background="@drawable/background1"
-                layout_width="match_parent"
-                layout_height="40"
-                hint="eg. username@domain.com"
-                textColorHint="#ffffff"
-                clearButton="true"
-                clearButtonNormalTint="#ffff0000"
-                textStyle="bold"
-                layout_toRightOf="username_label"
-                layout_alignParentRight="true"/>
+                    android:id="username"
+                    android:background="@drawable/background1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40"
+                    android:hint="eg. username@domain.com"
+                    android:textColorHint="#ffffff"
+                    android:clearButton="true"
+                    android:clearButtonNormalTint="#ffff0000"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="username_label"
+                    android:layout_alignParentRight="true"/>
         </RelativeLayout>
         <RelativeLayout
-            layout_width="match_parent"
-            layout_height="wrap_content"
-            layout_marginBottom="10">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10">
             <TextView
-                id="password_label"
-                layout_width="100"
-                layout_height="40"
-                layout_alignParentLeft="true"
-                layout_gravity="center_vertical"
-                gravity="left|center_vertical"
-                font="Helvetica-Bold"
-                text="@string/values.password_label"/>
+                    android:id="password_label"
+                    android:layout_width="100"
+                    android:layout_height="40"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left|center_vertical"
+                    android:font="Helvetica-Bold"
+                    android:text="@string/values.password_label"/>
             <EditText
-                id="password"
-                background="@drawable/background1"
-                maskCharacters="true"
-                layout_width="match_parent"
-                layout_height="40"
-                layout_toRightOf="password_label"
-                layout_alignParentRight="true"/>    
+                    android:id="password"
+                    android:background="@drawable/background1"
+                    android:maskCharacters="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="40"
+                    android:layout_toRightOf="password_label"
+                    android:layout_alignParentRight="true"/>
         </RelativeLayout>
 
         <TextView
-            layout_width="wrap_content"
-            layout_height="wrap_content"
-            layout_gravity="right"
-            text="@string/values.formular_hint"
-            textSize="10"
-            textColor="#aaaaaa"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/values.formular_hint"
+                android:textSize="10"
+                android:textColor="#aaaaaa"/>
         <TextArea
-            id="freeText"
-            background="@drawable/background1"
-            layout_width="match_parent"
-            layout_height="200"
-            layout_marginBottom="10"/>
+                android:id="freeText"
+                android:background="@drawable/background1"
+                android:layout_width="match_parent"
+                android:layout_height="200"
+                android:layout_marginBottom="10"/>
 
         <TextView
-            id="androidStatus"
-            layout_width="match_parent"
-            layout_height="wrap_content"
-            layout_marginBottom="10"
-            textSize="12"/>
+                android:id="androidStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10"
+                android:textSize="12"/>
         <LinearLayout
-            layout_width="match_parent"
-            layout_height="wrap_content"
-            orientation="horizontal"
-            gravity="center_horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
             <UIButton
-                id="submitButton"
-                onClick="didPressSubmitButton"
-                textColor="@color/button_color"
-                background="@drawable/button_background"
-                layout_width="100"
-                layout_height="30"
-                text="@string/values.submit_button_title"/>
+                    android:id="submitButton"
+                    android:onClick="didPressSubmitButton"
+                    android:textColor="@color/button_color"
+                    android:background="@drawable/button_background"
+                    android:layout_width="100"
+                    android:layout_height="30"
+                    android:text="@string/values.submit_button_title"/>
 
             <Button
-                id="toggleButton"
-                layout_width="wrap_content"
-                layout_height="30"
-                onClick="didPressToggleButton"
-                background="@drawable/background1"
-                textColor="@color/button_color"
-                drawableLeft="@drawable/ic_account_circle_18pt"
-                drawableRight="@drawable/android.jpg"
-                drawablePadding="10dp"
-                layout_marginLeft="10"
-                textSize="10sp"
-                text="@string/values.toggle_android_button_title" />
+                    android:id="toggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30"
+                    android:onClick="didPressToggleButton"
+                    android:background="@drawable/background1"
+                    android:textColor="@color/button_color"
+                    android:drawableLeft="@drawable/ic_account_circle_18pt"
+                    android:drawableRight="@drawable/android.jpg"
+                    android:drawablePadding="10dp"
+                    android:layout_marginLeft="10"
+                    android:textSize="10sp"
+                    android:text="@string/values.toggle_android_button_title"/>
         </LinearLayout>
     </LinearLayout>
 </UIScrollView>
