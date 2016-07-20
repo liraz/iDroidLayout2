@@ -4,12 +4,13 @@ before_install:
 xcode_workspace: iDroidLayout2.xcworkspace
 xcode_scheme: iDroidLayout2
 xcode_sdk: iphonesimulator8.1
+osx_image: xcode73
 cache:
   bundler: true
   directories: Pods
 install:
   - bundle exec pod install
 script:
-  - bundle exec xcodebuild -workspace iDroidLayout2.xcworkspace -scheme iDroidLayout2 -sdk iphonesimulator8.1 -arch i386 clean build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c; test ${PIPESTATUS[0]} -eq 0
+  set -e && xcodebuild -workspace iDroidLayout2.xcworkspace -scheme iDroidLayout2 -sdk iphonesimulator8.1 -arch i386 clean build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c; test ${PIPESTATUS[0]} -eq 0
 after_success:
   - bundle exec slather coverage -t
