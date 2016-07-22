@@ -11,6 +11,6 @@ cache:
 install:
   - bundle exec pod install
 script:
-  set -e && xcodebuild -workspace iDroidLayout2.xcworkspace -scheme iDroidLayout2 -sdk iphonesimulator9.0 -arch i386 clean build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c; test ${PIPESTATUS[0]} -eq 0
+  set -e && xcodebuild -workspace iDroidLayout2.xcworkspace -scheme iDroidLayout2 -sdk iphonesimulator9.0 -arch i386 clean build GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c; test ${PIPESTATUS[0]} -eq 0
 after_success:
   - bundle exec slather coverage -t
