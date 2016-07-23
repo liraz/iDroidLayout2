@@ -1,5 +1,7 @@
 language: objective-c
+rvm: 1.9.3
 before_install:
+  - gem install cocoapods -v '0.32.1'
   - bundle install
 xcode_workspace: iDroidLayout2.xcworkspace
 xcode_scheme: iDroidLayout2
