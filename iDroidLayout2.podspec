@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "iDroidLayout2"
-  s.version       = "0.2.0"
+  s.version       = "0.2.1"
   s.summary       = "iDroid-Layout2 is a port of Androids layout system and its drawable and resources framework to iOS."
 
   s.description   = <<-DESC
